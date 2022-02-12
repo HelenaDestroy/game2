@@ -22,8 +22,7 @@ function dibujar()
         papel.drawImage (fondo.objeto, 0, 0);
     }
     if (cerdito.cargaOk)
-        {  console.log("e");
-            papel.drawImage(cerdito.objeto, 30, 30);
+        { papel.drawImage(cerdito.objeto, 30, 30);
         }
     }
 
@@ -42,51 +41,36 @@ DOWN: 40,
 LEFT: 37,
 RIGHT: 39
 };
+cerdito.objeto.addEventListener("keyup", dibujarCerdito);
 
-cerdito.objeto.addEventListener("keyup", moverCerdito);
-
-moverCerdito(evento.keyCode)
-{   xi = 10;
-    yi = 10;
-    var movimiento = 10;
-if (evento.teclas.UP) 
-{
-   moverCerdito(xi, yi, x, (y - movimiento), papel);
-    y = y - movimiento;
+function dibujarCerdito(){
+if (teclas.UP){
+    // cerdito.cargaOk;
+    // dibujar(cerdito.objeto, 30, (y - 10));
+    console.log ("arriba");
 }
-if (evento.teclas.DOWN)        
-   moverCerdito(xi, yi, x, (y + movimiento), papel);
-        y = y + movimiento;
-}        
-    if (evento.teclas.LEFT){
-   moverCerdito(xi, yi, (x - movimiento), y, papel);
-        x = x - movimiento;
-    }
-if (evento.teclas.RIGHT){
-    moverCerdito(xi, yi, (x + movimiento), y, papel);
-    x = x + movimiento;
- }
+}
 
+//    dibujarCerdito(xi, yi, x, (y - movimiento), papel);
+//     y = y - movimiento;}
 
-
-
-
-
+// if (teclas.UP) 
+// {
+  
    
-      
-      
-     
-    
-    
+//    dibujarCerdito(xi, yi, x, (y - movimiento), papel);
+//     y = y - movimiento;
+// }
+// if (teclas.DOWN)        
+//    dibujarCerdito(xi, yi, x, (y + movimiento), papel);
+//         y = y + movimiento;
+// }        
+//     if (teclas.LEFT){
+//     dibujarCerdito(xi, yi, (x - movimiento), y, papel);
+//         x = x - movimiento;
+//     }
+// if (teclas.RIGHT){
+//     dibujarCerdito(xi, yi, (x + movimiento), y, papel);
+//     x = x + movimiento;
+//  }
 
-
-    // dejemos planteado el problema.
-
-
-    // LOGRAR QUE EL cerdito SE MUEVA CON EL TECLADO.
-
-    // CARGAR cerdito ADD EVENT Listener
-    // ASOCIAR MOVIMIENTO DE TECLAS AL cerdito  -EL EVENTO DEBERIA INICIAR CON ALGUN BOTON-
-    // VER QUE EL cerdito no deje la estela al andar
-
-    // QUE NO MODIFIQUE VACAS Y Pollos
