@@ -44,17 +44,28 @@ RIGHT: 39
 var movimiento = 10;
 var y = 30;
 var x = 30;
-document.addEventListener("keyup", dibujarCerdito);
+document.addEventListener("keyup", moverCerdito);
 
-function dibujarCerdito(evento){
+function moverCerdito(evento){
 if (evento.keyCode == teclas.UP){
     // cerdito.cargaOk;
-    dibujar(cerdito.objeto, x, (y - movimiento));
+    dibujarCerdito();
     console.log ("arriba");
     }
 }
+function dibujarCerdito(){
+if (fondo.cargaOk)
+    {
+    papel.drawImage (fondo.objeto, 0, 0);
+    }
+if (cerdito.cargaOk)
+ {
+     papel.drawImage(cerdito.objeto, x, y - movimiento);
+    }
+}
 
-//    dibujarCerdito(xi, yi, x, (y - movimiento), papel);
+
+//    dibujar(xi, yi, x, (y - movimiento), papel);
 //     y = y - movimiento;}
 
 // if (teclas.UP) 
