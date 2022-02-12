@@ -41,14 +41,17 @@ DOWN: 40,
 LEFT: 37,
 RIGHT: 39
 };
-cerdito.objeto.addEventListener("keyup", dibujarCerdito);
+var movimiento = 10;
+var y = 30;
+var x = 30;
+document.addEventListener("keyup", dibujarCerdito);
 
 function dibujarCerdito(evento){
 if (evento.keyCode == teclas.UP){
     // cerdito.cargaOk;
-    // dibujar(cerdito.objeto, 30, (y - 10));
+    dibujar(cerdito.objeto, x, (y - movimiento));
     console.log ("arriba");
-}
+    }
 }
 
 //    dibujarCerdito(xi, yi, x, (y - movimiento), papel);
