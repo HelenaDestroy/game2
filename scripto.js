@@ -51,6 +51,7 @@ if (evento.keyCode == teclas.UP){
     // cerdito.cargaOk;
     dibujarCerdito();
     console.log ("arriba");
+    y = y - movimiento;
     }
 }
 function dibujarCerdito(){
@@ -60,7 +61,7 @@ if (fondo.cargaOk)
     }
 if (cerdito.cargaOk)
  {
-     papel.drawImage(cerdito.objeto, x, y - movimiento);
+     papel.drawImage(cerdito.objeto, x, y);
     }
 }
 
@@ -68,13 +69,7 @@ if (cerdito.cargaOk)
 //    dibujar(xi, yi, x, (y - movimiento), papel);
 //     y = y - movimiento;}
 
-// if (teclas.UP) 
-// {
-  
-   
-//    dibujarCerdito(xi, yi, x, (y - movimiento), papel);
-//     y = y - movimiento;
-// }
+
 // if (teclas.DOWN)        
 //    dibujarCerdito(xi, yi, x, (y + movimiento), papel);
 //         y = y + movimiento;
