@@ -48,12 +48,28 @@ document.addEventListener("keyup", moverCerdito);
 
 function moverCerdito(evento){
 if (evento.keyCode == teclas.UP){
-    // cerdito.cargaOk;
     dibujarCerdito();
     console.log ("arriba");
     y = y - movimiento;
     }
+if (evento.keyCode == teclas.DOWN){
+    dibujarCerdito();
+    console.log ("ABAJO");
+    y = y + movimiento;
 }
+if (evento.keyCode == teclas.LEFT){
+dibujarCerdito();
+console.log ("LEFT");
+x = x - movimiento;
+}
+if (evento.keyCode == teclas.RIGHT){
+dibujarCerdito();
+console.log ("RIGHT");
+x = x + movimiento;
+}
+}
+
+
 function dibujarCerdito(){
 if (fondo.cargaOk)
     {
