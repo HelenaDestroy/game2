@@ -43,8 +43,8 @@ RIGHT: 39
 };
 cerdito.objeto.addEventListener("keyup", dibujarCerdito);
 
-function dibujarCerdito(){
-if (teclas.UP){
+function dibujarCerdito(evento){
+if (evento.keyCode == teclas.UP){
     // cerdito.cargaOk;
     // dibujar(cerdito.objeto, 30, (y - 10));
     console.log ("arriba");
